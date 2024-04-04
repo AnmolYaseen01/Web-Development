@@ -1,0 +1,308 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Yaseen's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        select {
+          @apply text-base border-pink-300 rounded-md bg-pink-50; /* Adjusted for light pink theme */
+        }
+        .Github-post iframe {
+          @apply w-full; /* Ensure iframe is responsive */
+        }
+        .skill-progress {
+            background: rgba(219, 39, 119, 0.2);
+            width: 0%;
+            height: 8px;
+            border-radius: 9999px;
+            transition: width 2s;
+        }
+        /* Additional custom styles for animations */
+    @keyframes grow {
+        0% { width: 0%; }
+        100% { width: 90%; } /* Adjust this value based on actual skill level */
+    }
+    .animate-grow {
+        animation: grow 2s ease-in-out forwards;
+    }
+    </style>
+</head>
+<body class="bg-pink-50 text-black">
+<header class="bg-pink-200 text-white shadow-lg border-solid border-2 border-pink-600">
+    <div class="md:container md:mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="#" class="flex title-font font-bold items-center text-xl text-pink-600 mb-4 md:mb-0">
+            <span class="ml-3 text-pink-700 text-2xl font-bold hover:text-pink-500">Anmol Yaseen's Portfolio</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-pink-900 justify-center">
+            <a href="#" class="mr-5 hover:text-pink-600 text-2xl">About Me</a>
+            <a href="projects.html" class="mr-5 hover:text-pink-600 text-2xl">Experience</a>
+            <a href="#" class="mr-5 hover:text-pink-600 text-2xl">Skills</a>
+        </nav>
+        <button class="inline-flex items-center bg-pink-600 hover:bg-pink-400 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 transition-colors duration-200">Contact Me
+            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="bg-pink-100 py-10 ">
+        <div class="container mx-auto px-4 flex px-5 py-24 md:flex-row flex-col items-center border-solid border-2 border-pink-400">
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Welcome to My Portfolio
+                    <br class="hidden lg:inline-block text-3xl font-bold text-center mb-6 text-pink-600">I'm Anmol Yaseen, a passionate Data Analyst.
+                </h1>
+                <p class="mb-8 leading-relaxed">My technical prowess is not just confined to theoretical knowledge; I have hands-on experience as a Python programmer, where I applied my coding skills in real-world projects.</p>
+                <div class="flex justify-center">
+                    <button class="inline-flex text-white bg-pink-500 hover:bg-pink-600 border-0 py-2 px-6 focus:outline-none rounded text-lg transition-colors duration-300">Learn More</button>
+                    <button class="ml-4 inline-flex text-pink-700 bg-pink-100 hover:bg-pink-200 border-0 py-2 px-6 focus:outline-none rounded text-lg transition-colors duration-200 border-solid border-2 border-pink-400 border-solid border-2 border-pink-200">View Projects</button>
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="img1.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-pink-100 py-10">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center border-solid border-2 border-pink-400">
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center ">
+                <h2 class="text-2xl font-bold text-center mb-6 text-pink-600">About Me</h2>
+                <p class="text-lg leading-relaxed">I am Anmol Yaseen, a passionate and forward-thinking individual specializing in the realms of Computer Science, with a particular focus on Machine Learning and Data Analysis. Currently enrolled at the Virtual University of Pakistan for a Bachelor's degree in Computer Science, I am honing my skills to become a tech innovator of tomorrow. My academic journey is complemented by active participation in prestigious tech communities, including Google's Women Techmakers and the Google Developer Student Clubs at IMSciences and VU, where I immerse myself in the latest technologies and contribute to fostering innovation and diversity in tech.</p>
+                <p class="text-lg leading-relaxed">My technical prowess is not just confined to theoretical knowledge; I have hands-on experience as a Python programming intern at CodSoft, where I applied my coding skills in real-world projects. I am adept at utilizing tools like Python for machine learning, NumPy for data manipulation, Microsoft Excel for data analysis, and Microsoft PowerBi for data Visualization, which enables me to extract insights from data and build predictive models that drive strategic decision-making. My ability to blend technical skills with strong communication and project management capabilities allows me to effectively collaborate across teams and lead projects to successful completion.</p>
+                <p class="text-lg leading-relaxed">I am on a continual journey of learning and professional growth, seeking opportunities to apply my skills in machine learning and data analysis, contributing to innovative solutions that address real-world challenges. #ComputerScience #Cybersecurity #WebDevelopment #FutureInTech</p>
+            </div>
+        </div>
+    </section>
+
+            <!-- Experience List -->
+
+    <section class="bg-pink-100 py-10">
+        <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+            <div class="text-center">
+                <h3 class="text-2xl text-pink-600 font-bold mb-4">Experience</h3>
+                <ul>
+                    <li class="mb-2">Google - Women Techmakers Community Member (Feb 2024 – Present)</li>
+                    <li class="mb-2">Google Developer Student Club IMSciences - Member (Jan 2024 – Present)</li>
+                    <li class="mb-2">CodSoft - Python Programming Intern (Sep 2023 – Oct 2023)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<!-- Skill Set -->
+<section class="bg-pink-100 py-10">
+    <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+        <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill Item -->
+            <div class="skill-item bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl text-pink-600 mb-2">Machine Learning</h3>
+                <p class="text-sm mb-4">Expertise in developing predictive models using Python and machine learning libraries such as scikit-learn and TensorFlow. Experienced in data preprocessing, model training, and evaluation.</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="skill-progress bg-pink-600" style="width: 90%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl text-pink-600 mb-2">Data Analysis</h3>
+                <p class="text-sm mb-4">Skilled in extracting insights from complex datasets using Python libraries like Pandas and NumPy. Proficient in statistical analysis, data cleaning, and visualization to support decision-making.</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="skill-progress bg-pink-600" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-item bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl text-pink-600 mb-2">Data Viisualizaion</h3>
+                <p class="text-sm mb-4">Proficient in creating impactful data visualizations and dashboards using tools like Matplotlib, Seaborn, and Power BI. Capable of translating complex findings into understandable and compelling visual stories.</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="skill-progress bg-pink-600" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-item bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <h3 class="text-xl text-pink-600 mb-2">Python Programming</h3>
+                <p class="text-sm mb-4">Advanced proficiency in Python for software development, automation, and data science projects. Well-versed in writing clean, efficient, and maintainable code.</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="skill-progress bg-pink-600" style="width: 90%;"></div>
+                </div>
+            </div>
+            <!-- Additional skill items here -->
+
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.skill-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.querySelector('.skill-progress').classList.add('animate-grow');
+        });
+        item.addEventListener('mouseleave', function() {
+            this.querySelector('.skill-progress').classList.remove('animate-grow');
+        });
+    });
+</script>
+    
+
+    <section id="Github-projects" class="bg-pink-100 py-10">
+        <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+            <h2 class="text-3xl font-bold text-center mb-6 text-pink-600">Machine Learning Projects</h2>
+            <div class="text-center">
+                <p class="mb-6 text-black text-xl">Check out some of my projects on Github:</p>
+                <div class="space-y-4 text-xl">
+                    <!-- Project 1 Link -->
+
+                    <a href="https://github.com/AnmolYaseen01/Breast-Cancer-Classification-Project" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                    Breast Cancer Classificcation Project   
+                    </a>
+
+                    <a href="https://github.com/AnmolYaseen01/Sms_Spam_Detection_system" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        SMS Spam Detection System
+                     </a>
+
+                     <a href="https://github.com/AnmolYaseen01/Flight-On-time-Arrival-Prediction-Using-RandomForestClasifier-" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        Flight On Time Arrival Prediction Using RandomForestClassifier
+                     </a>
+                  
+                    <a href="C:\Users\Admin\Documents\GitHub\Portfolio website\Solving_three_class_iris_species_classification_prob.html" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        Solving Iris Species Classification Problem USing Knn
+                    </a>
+                   
+                    <a href="https://github.com/AnmolYaseen01/Machine-Learning-Templates/blob/main/Building_Logistic_Regression_from_scratch_in_Python.ipynb" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">Building Logistic Regression from Scratch</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="Github-projects" class="bg-pink-100 py-10">
+        <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+            <h2 class="text-3xl font-bold text-center mb-6 text-pink-600">Data Analysis and Visualization Projects</h2>
+            <div class="text-center">
+                <p class="mb-6 text-black text-Xl">Check out some of my projects on Github:</p>
+                <div class="space-y-4 text-xl">
+                    <!-- Project 1 Link -->
+                    <a href="https://github.com/AnmolYaseen01/Interactive-data-analysis-dashboards-using-excel" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        Ecommerce Sales Data Analysis dashboard   
+                    </a>
+                    <!-- Project 2 Link -->
+                    <a href="https://github.com/AnmolYaseen01/Interactive-Data-Analysis-Dashboards-Using-power-BI" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        Interactive Health Care Data Analytics Dashboard
+                    </a>
+                    <a href="https://github.com/AnmolYaseen01/Numpy-Tutorials" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        Numpy For Scientific Computing and Array Manipulation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Github-projects" class="bg-pink-100 py-10">
+        <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+            <h2 class="text-3xl font-bold text-center mb-6 text-pink-600">Python Programming Projects</h2>
+            <div class="text-center">
+                <p class="mb-6 text-black text-Xl">Check out some of my projects on Github:</p>
+                <div class="space-y-4 text-xl">
+                    <!-- Project 1 Link -->
+                    <a href="https://github.com/AnmolYaseen01/codsoft-python-projects/blob/main/Contact_book.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                      GUI Based Contact Book Application
+                    </a>
+                    <!-- Project 2 Link -->
+                    <a href="https://github.com/AnmolYaseen01/Interactive-Data-Analysis-Dashboards-Using-power-BI" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        GUI Based Calculator Application 
+                    </a>
+                    <a href="https://github.com/AnmolYaseen01/codsoft-python-projects/blob/main/pswd_gen.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        GUI Based Password Generator
+                    </a>
+
+                    <a href="https://github.com/AnmolYaseen01/codsoft-python-projects/blob/main/rps_game.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        GUI Based Rock Paper Scissor Game
+                    </a>
+
+                    <a href="https://github.com/AnmolYaseen01/codsoft-python-projects/blob/main/rps_game.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        GUI Based Todo Application
+                    </a>
+
+                    <a href="https://github.com/AnmolYaseen01/Alien-invasion-game" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                        GUI Based Alien Invasion Game 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="Github-projects" class="bg-pink-100 py-10">
+    <div class="container mx-auto px-5 py-24 border-solid border-2 border-pink-400">
+        <h2 class="text-3xl font-bold text-center mb-6 text-pink-600">Other Projects</h2>
+        <div class="text-center">
+            <p class="mb-6 text-black text-xl">Check out these tutorials on Github:</p>
+            <div class="space-y-4 text-xl">
+    
+                <a href="https://github.com/AnmolYaseen01/Numpy-Tutorials" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">
+                    Numpy For Scientific Computing and Array Manipulation
+                </a>
+
+
+                <a href="https://github.com/AnmolYaseen01/Machine-Learning-Templates/blob/main/Using_Sk-learn_To_Build_Linear_Regression_Model.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">Using Sklearn To Build Linear Regression Model</a>
+
+                <a href="https://github.com/AnmolYaseen01/Machine-Learning-Templates/blob/main/model%20eveluation%20using%20cross_val_score.py" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">Model Evaluation Using Cross Val Score</a>
+
+                <a href="https://github.com/AnmolYaseen01/Machine-Learning-Templates/blob/main/preprocessing%20data%20-%20z_score%20normalization.ipynb" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">Preprocessing Data - z score normalization</a>
+
+                <a href="https://github.com/AnmolYaseen01/Machine-Learning-Templates/blob/main/visualizing%20regression%20line%20using%20scatter%20plot.ipynb" target="_blank" rel="noopener noreferrer" class="block bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-200">Visualizing Regression Line Using Scatter Plot</a>
+    </div>
+        </div>
+            </div>
+</section>
+    
+        <section id="home" class="bg-pink-100 py-10">
+          <div class="container mx-auto px-5 py-24 border-2 border-pink-400 rounded-lg shadow-lg">
+              <div class="flex flex-wrap justify-center">
+                  <div class="w-full lg:w-1/2 py-6 px-5">
+                      <h1 class="text-3xl font-bold text-center mb-6 text-pink-600">Contact For Any Queries</h1>
+                      <form class="w-full max-w-lg mx-auto">
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div class="form-group col-span-2 md:col-span-1">
+                                  <input type="text" class="form-control p-4 rounded-md border border-gray-300 w-full" id="form-floating-1" placeholder="John Doe" />
+                                  <label for="form-floating-1" class="text-medium text-gray-600">Full Name</label>
+                              </div>
+                              <div class="form-group col-span-2 md:col-span-1">
+                                  <input type="email" class="form-control p-4 rounded-md border border-gray-300 w-full" id="form-floating-2" placeholder="name@example.com" />
+                                  <label for="form-floating-2" class="text-medium text-gray-600">Email address</label>
+                              </div>
+                              <div class="form-group col-span-2">
+                                  <input type="text" class="form-control p-4 rounded-md border border-gray-300 w-full" id="form-floating-3" placeholder="Subject" />
+                                  <label for="form-floating-3" class="text-medium text-gray-600">Subject</label>
+                              </div>
+                              <div class="form-group col-span-2">
+                                  <textarea class="form-control p-4 rounded-md border border-gray-300 w-full" placeholder="Message" id="form-floating-4" style="height: 150px"></textarea>
+                                  <label for="form-floating-4" class="text-medium text-gray-600">Message</label>
+                              </div>
+                              <div class="form-group col-span-2">
+                                  <button class="bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-md transition-colors duration-200 text-2xl" type="submit">Submit</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+
+</main>
+
+<footer class="bg-pink-600 font-bold text-white text-center text-xl p-4 mt-12">
+    <div class="md:container md:mx-auto">
+        <p>&copy; 2024 Anmol Yaseen. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
